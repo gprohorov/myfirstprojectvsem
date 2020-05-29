@@ -1,30 +1,54 @@
+
+/*
+ * Classname Main
+ *
+ * Version info 1
+ *
+ * Copyright Ivanov Ivan KNTEU
+ */
 package pro.edu;
 
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println(" Hello, World!");
 
-        byte age = 22;
-        System.out.println("My age is " + age +" years");
-        short height = 185;
-        System.out.println("My height is " + height + " cm");
-        int anualSalary = 100000;
-        System.out.println(" My anual salary is about " + anualSalary);
+   //  String word = "ABBA";
+     String word = "\"Ба-бах!\" - у уха баб";
+      word = word.toLowerCase();
 
-        long distanceCentavra = 10_000_000_000l;
+            word = word.replaceAll(" ","");
+            word = word.replaceAll("–","");
+            word = word.replaceAll("\\.","");
+            word = word.replaceAll("\\?","");
+            word = word.replaceAll("\"","");
 
-        System.out.println("From me to the nearest galaxy is about " + distanceCentavra);
 
-        //--------------------------------------------------------------
 
-        float weight = 85.5f;
-        double gardenArea = 60.0;
-        char myMark = '5';
-        boolean isStudent = true;
-        double b = 5.0 ;
-        char c = '%';
+     String template = "";
 
+        for (int i = 0; i < word.length(); i++) {
+            int index = word.length() - i -1;
+            template += word.charAt(index);
+        }
+
+        String[] palindroms = new String[5];
+        palindroms[0] = "А в Енисее – синева";
+        palindroms[1] = "А кобыле цена дана, да не целы бока";
+
+        for (int i = 0; i < palindroms.length; i++) {
+
+        }
+
+      //  "А кобыле цена дана, да не целы бока"
+        //
+
+        System.out.println(template);
+
+        if (word.equals(template)) {
+            System.out.println(" This word is palindrom   TRUE ");
+        } else{
+            System.out.println(" This word is not palindrom  FALSE");
+        }
 
 
     }
